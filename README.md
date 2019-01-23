@@ -87,8 +87,6 @@ heroku deploy
 
 ### Credits
 
-- Front-end: Vodafone
-- Back-end: [Ghost](http://localhost:8080/tapas/admin/Ghost.org)
 - Text Editor: [Froala](https://www.froala.com/)
 - Homepage particles animation: [Vicent Garreau](http://vincentgarreau.com/particles.js/)
 - Some icons by [Flaticon](http://flaticon.com/)
