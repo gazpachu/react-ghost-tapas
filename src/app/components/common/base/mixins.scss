@@ -1,0 +1,30 @@
+@mixin desktop() {
+	@media (min-width: 769px) { @content ; }
+}
+
+@mixin mobile() {
+	@media (max-width: 768px) { @content ; }
+}
+
+@mixin mobile-small() {
+	@media (max-width: 543px) { @content ; }
+}
+
+// Adds an scaling animation. Good for CTAs
+@mixin scale-anim($value: 1.1) {
+  transition: all 200ms ease-in;
+  transform: scale(1);
+
+  &:hover {
+      transition: all 200ms ease-in;
+      transform: scale(#{$value});
+  }
+}
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}

@@ -1,0 +1,241 @@
+.home {
+  .top-nav {
+    background-color: transparent;
+    height: 80px;
+
+    &:after,
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.top-nav {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  overflow: hidden;
+  background-color: $black;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: -1px;
+    width: 50%;
+    height: 20px;
+    transform: rotate(2deg);
+    background-color: $white;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -35px;
+    right: -1px;
+    width: 100%;
+    height: 50px;
+    transform: rotate(-2deg);
+    background-color: $white;
+  }
+
+  .top-nav-bar {
+    padding: 15px 0;
+    height: 60px;
+    position: absolute;
+    width: 100%;
+    z-index: 12;
+
+    @include mobile() {
+      padding: 20px 0;
+      height: 50px;
+    }
+  }
+
+  .logo-wrapper {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    right: 0;
+    margin: 0 auto;
+    width: 140px;
+    text-align: center;
+    overflow: hidden;
+
+    @include mobile() {
+      left: 20px;
+      top: 17px;
+      right: initial;
+    }
+  }
+
+  .logo {
+    width: 140px;
+    height: 31px;
+    fill: $white;
+    position: relative;
+    z-index: 1;
+  }
+
+  .masked-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    clip-path: url(#logo-mask);
+  }
+
+  .wave {
+    height: 32px;
+    width: 550px;
+    transform: translate(12px, 0);
+    animation: scroll-logo 10s alternate ease-in-out infinite;
+  }
+
+  @keyframes scroll-logo {
+    0% { transform: translate(12px, 0) }
+    20% { transform: translate(12px, 0) }
+    80% { transform: translate(-423px, 0) }
+    100% { transform: translate(-423px, 0) }
+  }
+
+  .user-info {
+    position: absolute;
+    right: 10px;
+
+    @include mobile() {
+      right: 50px;
+    }
+
+    .avatar {
+      width: 27px;
+      height: 27px;
+      border-radius: 20px;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+
+    .username {
+      font-size: 13px;
+      font-weight: bold;
+      font-family: 'Fira Sans', sans-serif;
+      color: $white;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      @include scale-anim();
+
+      span {
+        @include mobile() {
+          display: none;
+        }
+      }
+
+      .icon {
+        margin-left: 10px;
+        border: 1px solid $light-grey;
+      }
+    }
+
+    .exit-nav {
+      list-style-type: none;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      padding-top: 2px;
+      vertical-align: top;
+
+      @include mobile() {
+        display: none;
+      }
+
+      .exit-item {
+        display: inline-block;
+        width: 30px;
+        margin-left: 15px;
+        @include scale-anim();
+
+        button {
+          cursor: pointer;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .nav-icon {
+    margin-top: 7px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 20px;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    @include scale-anim();
+
+    @include mobile() {
+      display: block;
+      left: initial;
+      right: 20px;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: $white;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 6px;
+      }
+
+      &:nth-child(4) {
+        top: 12px;
+      }
+    }
+
+    &.opened {
+      position: fixed;
+
+      span {
+        &:nth-child(1) {
+          top: 6px;
+          width: 0;
+          left: 50%;
+        }
+
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+
+        &:nth-child(4) {
+          top: 14px;
+          width: 0;
+          left: 50%;
+        }
+      }
+    }
+  }
+
+  .overlay {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,79 @@
+button {
+	border: none;
+	background: none;
+}
+
+.btn {
+  color: $white;
+  border-width: 1px;
+  border-style: solid;
+	border-radius: 25px;
+	font-weight: 100;
+  padding: 3px 20px 3px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  @include scale-anim();
+
+  &.btn-primary {
+		background-color: $primary;
+    border-color: transparent;
+    color: $black;
+
+		&:active, &:focus, &:hover, &.disabled:hover {
+
+		}
+	}
+
+  &.btn-secondary {
+    border-color: $white;
+
+    &.inverted {
+      color: $white;
+    }
+	}
+
+  &.btn-tertiary {
+		background-color: $red;
+    border-color: transparent;
+    color: $white;
+
+		&:active, &:focus, &:hover, &.disabled:hover {
+
+		}
+	}
+
+  &.xs {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.toggle {
+
+  &.react-toggle {
+    vertical-align: top;
+    margin: 0 10px;
+  }
+
+  .react-toggle-track {
+    height: 20px;
+    width: 48px;
+    background-color: $black;
+  }
+
+  .react-toggle-thumb {
+    top: 0px;
+    width: 20px;
+    height: 20px;
+  }
+
+  &.react-toggle--checked {
+    .react-toggle-track,
+    &:hover:not(.react-toggle--disabled) .react-toggle-track {
+      background-color: $green;
+    }
+    .react-toggle-thumb {
+      border-color: $green;
+    }
+  }
+}

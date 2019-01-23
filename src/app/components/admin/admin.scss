@@ -1,0 +1,44 @@
+.admin {
+  .page {
+    .section {
+      &.hero {
+        @include clearfix();
+
+        .invite-user {
+          margin-left: 10px;
+          line-height: 1.5;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .invite-form {
+      display: none;
+      border: 1px solid $lighter-grey;
+      border-radius: 5px;
+      padding: 10px;
+      width: 100%;
+      margin: 20px auto;
+
+      .email {
+        border-bottom: 1px solid $black;
+        width: 150px;
+        margin-right: 20px;
+      }
+
+      .submit-invite {
+        margin-left: 10px;
+      }
+
+      .loader-small {
+        display: inline-block;
+        position: initial;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.pagination {
+  text-align: center;
+
+  .prev, .next {
+    display: inline-block;
+
+    &.disabled {
+      color: $light-grey;
+    }
+  }
+
+  .prev {
+    &:after {
+      content: '';
+      border: 1px solid $lighter-grey;
+      position: relative;
+      height: 8px;
+      margin: 0 10px;
+    }
+  }
+}

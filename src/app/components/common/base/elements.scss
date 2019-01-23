@@ -1,0 +1,74 @@
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: $primary;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+[role="button"],
+button,
+input,
+textarea,
+select {
+  border: none;
+  background: none;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+/* radio buttons and checkboxes */
+label.checkbox,
+label.radio {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  display: none;
+}
+
+label.checkbox:before,
+label.radio:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-width: 1px;
+  border-style: solid;
+  margin-right: 10px;
+  border-color: $darkest-grey;
+  vertical-align: middle;
+}
+
+label.radio:before {
+  border-radius: 4px;
+}
+
+label.checkbox:before {
+  border-radius: 0;
+}
+
+input[type=checkbox]:checked + label:before,
+input[type=radio]:checked + label:before {
+  content: "";
+  background-color: $grey;
+}
+
+label.radio .text {
+  color: $darkest-grey;
+  font-weight: 500;
+}

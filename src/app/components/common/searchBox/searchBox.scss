@@ -1,0 +1,139 @@
+.search-box {
+  position: absolute;
+  left: 60px;
+  top: 17px;
+
+  @include mobile() {
+    left: 190px;
+    top: 20px;
+  }
+
+  .search {
+    cursor: pointer;
+    @include scale-anim();
+
+    .icon {
+      height: 17px;
+      width: 17px;
+      fill: $white;
+    }
+  }
+
+  .search-overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 60px;
+    margin: 0 auto;
+    z-index: 10;
+    width: 80%;
+    color: white;
+
+    .search-results {
+      height: calc(100vh - 110px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  .close {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: -40px;
+    padding: 0;
+
+    .icon {
+      fill: white;
+    }
+  }
+
+  .keywords {
+    border-bottom: 2px solid $white;
+    color: $white;
+    font-size: 22px;
+    width: 100%;
+    margin-bottom: 20px;
+
+    &::-webkit-input-placeholder {
+      color: $white;
+      font-size: 22px;
+    }
+  }
+
+  .loader-small {
+    display: inline-block;
+    top: 1px;
+    position: absolute;
+    right: 0;
+  }
+
+  .overlay {
+    display: block;
+  }
+
+  .found-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 10px;
+      cursor: pointer;
+      border-top: 1px solid $dark-grey;
+      @include clearfix();
+
+      &:first-child {
+        border: none;
+      }
+
+      &:hover {
+        background-color: darken($primary, 30%);
+
+        a span {
+          color: $lighter-grey;
+        }
+      }
+
+      a {
+        color: $white;
+        text-decoration: none;
+
+        span {
+          font-style: italic;
+          color: $grey;
+        }
+      }
+
+      .featured-image {
+        display: block;
+
+        @include desktop() {
+          float: left;
+          margin-right: 20px;
+          border-radius: 3px;
+          width: 50px;
+          @include scale-anim();
+        }
+
+        @include mobile() {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+
+      .listing-thumb {
+        width: 50px;
+        height: 37px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        border: 1px solid $lighter-grey;
+
+        @include mobile() {
+          display: none;
+        }
+      }
+    }
+  }
+}

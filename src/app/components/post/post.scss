@@ -1,0 +1,45 @@
+.post {
+
+  &.is-page {
+    .post-title {
+      margin-bottom: 20px;
+    }
+  }
+
+  .post-title {
+    margin-bottom: 5px;
+  }
+
+  .post-meta {
+    margin-bottom: 20px;
+
+    .icon {
+      fill: $black;
+    }
+  }
+
+  .header-avatar {
+    float: left;
+  }
+
+  .header-meta {
+    padding-top: 4px;
+    display: inline-block;
+  }
+
+  .featured-image,
+  .excerpt img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .excerpt {
+    padding-bottom: 20px;
+    margin-bottom: 70px;
+
+    iframe {
+      width: 1px;
+      min-width: 100%;
+    }
+  }
+}

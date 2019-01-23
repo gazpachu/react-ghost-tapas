@@ -1,0 +1,74 @@
+.home {
+  .page {
+    margin-top: 320px;
+
+    @include desktop() {
+      min-height: calc(100vh - 570px);
+    }
+
+    .hero {
+      position: absolute;
+      z-index: 1;
+      top: 100px;
+      color: $white;
+
+      @include mobile() {
+        padding-right: 20px;
+      }
+
+      h1 {
+        a { color: $white; }
+        sup {
+          margin-left: 2px;
+          font-size: 12px;
+        }
+      }
+
+      .buttons {
+        margin-top: 30px;
+      }
+
+      .btn {
+        margin-right: 10px;
+        font-size: 12px;
+        display: inline-block;
+      }
+    }
+  }
+
+  #particles-js {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    background-color: $black;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -25px;
+      left: -1px;
+      width: 50%;
+      height: 20px;
+      transform: rotate(2deg);
+      background-color: $white;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -25px;
+      right: -1px;
+      width: 100%;
+      height: 40px;
+      transform: rotate(-1.5deg);
+      background-color: $white;
+    }
+  }
+}

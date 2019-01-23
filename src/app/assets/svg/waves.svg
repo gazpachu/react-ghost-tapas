@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="258px" height="86px" viewBox="0 0 258 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#00FAFF" offset="0%"></stop>
+            <stop stop-color="#00FF8A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="49.2666394%" y1="8.10767136%" x2="49.2666394%" y2="114.247334%" id="linearGradient-2">
+            <stop stop-color="#FFEF00" offset="0%"></stop>
+            <stop stop-color="#FF00CE" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="GRAPHS" transform="translate(1.000000, 1.000000)" stroke-width="2">
+            <path d="M0.126556617,68.7131842 C23.706923,68.7131864 32.2691644,28.1626055 45.8453591,28.1626055 C59.4215538,28.1626055 62.7537328,58.5820345 79.7690976,58.5820356 C96.7844624,58.5820368 103.592901,0.200744019 123.259262,0.200744715 C142.925622,0.200745412 155.087251,83.4121036 179.365544,83.4121026 C203.643837,83.4121017 219.484372,7.89620585 255.773862,7.89620535" id="LIKES_GRAPH" stroke="url(#linearGradient-1)"></path>
+            <path d="M0.290123457,6.33445257 C27.1121399,6.3344547 34.2654321,81.9599159 54.2654321,81.9599159 C74.2654321,81.9599159 79.0205761,26.5692297 96.6039095,26.5692297 C114.187243,26.5692297 121.647119,81.9599159 142.185185,81.9599159 C162.723251,81.9599159 173.497942,37.1451252 193.016461,37.1451252 C212.534979,37.1451252 230.360082,75.563993 255.350823,75.563993" id="COMMENTS_GRAPH" stroke="url(#linearGradient-2)"></path>
+        </g>
+    </g>
+</svg>

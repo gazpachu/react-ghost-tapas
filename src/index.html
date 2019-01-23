@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Fira+Sans:300,400" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="<%= htmlWebpackPlugin.options.path %>/static/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="<%= htmlWebpackPlugin.options.path %>/static/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<%= htmlWebpackPlugin.options.path %>/static/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<%= htmlWebpackPlugin.options.path %>/static/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<%= htmlWebpackPlugin.options.path %>/static/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<%= htmlWebpackPlugin.options.path %>/static/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<%= htmlWebpackPlugin.options.path %>/static/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<%= htmlWebpackPlugin.options.path %>/static/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= htmlWebpackPlugin.options.path %>/static/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="<%= htmlWebpackPlugin.options.path %>/static/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="<%= htmlWebpackPlugin.options.path %>/static/icons/android-icon-144x144.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="<%= htmlWebpackPlugin.options.path %>/static/icons/android-icon-128x128.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="<%= htmlWebpackPlugin.options.path %>/static/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="<%= htmlWebpackPlugin.options.path %>/static/icons/favicon-72x72.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="<%= htmlWebpackPlugin.options.path %>/static/icons/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="36x36" href="<%= htmlWebpackPlugin.options.path %>/static/icons/favicon-36x36.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%= htmlWebpackPlugin.options.path %>/static/icons/favicon-16x16.png">
+    <link rel="manifest" href="<%= htmlWebpackPlugin.options.path %>/static/manifest.json">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileImage" content="<%= htmlWebpackPlugin.options.path %>/static/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:site_name" content="ReactGhost" />
+
+    <style>
+      @font-face {
+        font-family: 'FontAwesome';
+        src: url('<%= htmlWebpackPlugin.options.path %>/static/fonts/fontawesome-webfont.eot?v=4.7.0');
+        src: url('<%= htmlWebpackPlugin.options.path %>/static/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('<%= htmlWebpackPlugin.options.path %>/static/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('<%= htmlWebpackPlugin.options.path %>/static/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('/tapas/assets/static/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body {
+        background-color: #000;
+      }
+
+      .loading-assets {
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      .loading-assets p {
+        font-family: sans-serif;
+        color: white;
+        font-weight: lighter;
+        font-size: 12px;
+      }
+
+      .loading-assets .loader-small {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        top: 0;
+      }
+
+      .loader-small,
+      .loader-small:after {
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+      }
+
+      .loader-small {
+        display: none;
+        position: absolute;
+        top: 40px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-left: 1px solid #000;
+        transform: translateZ(0);
+        animation: spinner 1.1s infinite linear;
+      }
+
+      .loader-small.inverted {
+        border-color: rgba(255,255,255,0.3);
+        border-left-color: white;
+      }
+
+      @keyframes spinner {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+	</head>
+  <body>
+<!--[if lt IE 10]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+		<div id="react-root">
+      <noscript>This app requires JavaScript. Please make sure that your browser supports it.</noscript>
+      <div class="loading-assets">
+        <div class="loader-small inverted"></div>
+        <p>Loading App</p>
+      </div>
+    </div>
+  </body>
+</html>

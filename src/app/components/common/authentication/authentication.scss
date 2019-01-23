@@ -1,0 +1,21 @@
+.authentication {
+  position: absolute;
+  right: 50px;
+  top: 60px;
+  z-index: 1;
+  background-color: rgba(0,0,0,.6);
+  padding: 20px;
+  border: 1px solid $grey;
+  border-radius: 5px;
+  display: none;
+
+  &.opened {
+    display: block;
+  }
+
+  input {
+    color: $white;
+    font-size: 13px;
+    border-bottom: 1px solid $grey;
+  }
+}

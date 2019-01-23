@@ -1,0 +1,130 @@
+.hidden {
+  display: none !important;
+}
+
+.align-right {
+  float: right;
+}
+
+.align-left {
+  float: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+// Tooltip
+.tooltip {
+  position: relative;
+  display: inline-block;
+	opacity: 1;
+	z-index: 0;
+  font-family: 'Fira Sans', sans-serif;
+
+	&:hover {
+		z-index: 1070;
+	}
+
+	&:hover .tooltip-text,
+	&.active .tooltip-text {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.tooltip-text {
+		min-width: 120px;
+		visibility: hidden;
+		background-color: rgba(0,0,0,.9);
+		color: $white;
+		font-size: 13px;
+		text-align: center;
+		border-radius: 6px;
+		padding: 5px;
+		position: absolute;
+		opacity: 0;
+		transition: opacity 1s;
+		z-index: 9;
+
+		&.inverted {
+			background-color: rgba(255,255,255,.9);
+			color: $white;
+		}
+
+		&.right {
+			top: -5px;
+    		left: 105%;
+			&::after {
+				top: 50%;
+				right: 100%; /* To the left of the tooltip */
+				border-color: transparent rgba(0,0,0,.9) transparent transparent;
+        transform: rotate(90deg);
+        transform-origin: top;
+			}
+
+			&.inverted {
+				&::after { border-color: transparent rgba(255,255,255,.9) transparent transparent; }
+			}
+		}
+
+		&.left {
+			top: -5px;
+    		right: 105%;
+			&::after {
+				top: 50%;
+    			left: 100%; /* To the right of the tooltip */
+				border-color: rgba(0,0,0,.9) transparent transparent transparent;
+        transform: rotate(-90deg);
+        transform-origin: top;
+			}
+
+			&.inverted {
+				&::after { border-color: rgba(255,255,255,.9) transparent transparent transparent; }
+			}
+		}
+
+		&.top {
+			bottom: 125%;
+			left: 50%;
+			margin-left: -60px;
+			&::after {
+				top: 100%;
+				left: 50%;
+				border-color: rgba(0,0,0,.9) transparent transparent transparent;
+			}
+
+			&.inverted {
+				&::after { border-color: rgba(255,255,255,.9) transparent transparent transparent; }
+			}
+		}
+
+		&.bottom {
+			top: 100%;
+			left: 50%;
+			margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+			margin-top: 5px;
+			&::after {
+				bottom: 100%;
+				left: 50%;
+				border-color: transparent transparent rgba(0,0,0,.9) transparent;
+			}
+
+			&.inverted {
+				&::after { border-color: transparent transparent rgba(255,255,255,.9) transparent; }
+			}
+		}
+
+		span {
+			font-size: 11px;
+			display: block;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			margin-left: -5px;
+			border-width: 5px;
+			border-style: solid;
+		}
+	}
+}
